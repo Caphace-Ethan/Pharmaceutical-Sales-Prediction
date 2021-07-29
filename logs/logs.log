@@ -1,5 +1,40 @@
+INFO:root:Testing Loggings
+INFO:root:Testing Loggings
+INFO:root:Testing Loggings
+INFO:root:Testing Loggings
 ERROR:root:Exception in main()
 Traceback (most recent call last):
-  File "<ipython-input-97-e63ec437ddd9>", line 14, in <module>
+  File "<ipython-input-114-b0b1f259d607>", line 14, in <module>
     exit(main())
 NameError: name 'main' is not defined
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-114-b0b1f259d607>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-114-b0b1f259d607>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-114-b0b1f259d607>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:store Dataset read successfully
