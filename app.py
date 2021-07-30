@@ -5,11 +5,11 @@ import streamlit as st
 import altair as alt
 import plotly.express as px
 
-st.set_page_config(page_title="Dashboard | Telecom User Data Analysis ", layout="wide")
+st.set_page_config(page_title="Pharmaceutical Sales prediction across multiple stores ", layout="wide")
 
 def loadData():
     pd.set_option('max_column', None)
-    loaded_data = pd.read_csv('./data/Resp_dataSet.csv')
+    loaded_data = pd.read_csv('./data/train.csv')
     return loaded_data
 
 def selectHandset():
