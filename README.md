@@ -6,3 +6,11 @@
 - The EDA is done in 'Exploration_of_customer_purchasing_behavior.ipynb' in notebook folder
 
 ## Part 02. Prediction of Pharmaceutical store Sales
+
+- Data Preprocessing,
+- Building models with sklearn pipelines,
+- Choosing a loss function,
+- Post Prediction analysis,
+- Serialize models,
+- Building model with deep learning, and 
+- Using MLFlow to serve the prediction
