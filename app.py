@@ -14,7 +14,7 @@ def loadData():
 
 def selectHandset():
     df = loadData()
-    handset = st.multiselect("choose Device Type(s)", list(df['device_make'].unique()))
+    handset = st.multiselect("Choose Sore Type(s)", list(df['StoreType'].unique()))
     if handset:
         df = df[np.isin(df, handset).any(axis=1)]
         st.write(df)
