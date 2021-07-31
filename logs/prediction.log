@@ -4,3 +4,12 @@ Traceback (most recent call last):
   File "<ipython-input-2-8e3e74864ecc>", line 14, in <module>
     exit(main())
 NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
