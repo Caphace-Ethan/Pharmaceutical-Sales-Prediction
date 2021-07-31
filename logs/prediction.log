@@ -55,3 +55,93 @@ Traceback (most recent call last):
   File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/accessors.py", line 480, in __new__
     raise AttributeError("Can only use .dt accessor with datetimelike values")
 AttributeError: Can only use .dt accessor with datetimelike values
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-52-0ad34dc1b82b>", line 7, in <module>
+    train_data['Week'] = math.floor(train_data.Date.dt.day/7+1)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-54-6aa9f7180489>", line 7, in <module>
+    train_data['Week'] = round(math.floor(train_data.Date.dt.day/7+1),0)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-56-72d51f1bd02a>", line 7, in <module>
+    train_data['Week'] = round(math.floor(train_data.Date.dt.day/7+1),1)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-58-a403c5a01e7b>", line 7, in <module>
+    train_data['Week'] = math.floor(round(train_data.Date.dt.day/7+1,0))
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-60-bd74f328bc65>", line 7, in <module>
+    train_data['Week'] = math.floor(round(train_data.Date.dt.day/7+1))
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-62-fd7792682bbe>", line 7, in <module>
+    train_data['Week'] = round(math.floor(train_data.Date.dt.day/7+1))
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-64-0ad34dc1b82b>", line 7, in <module>
+    train_data['Week'] = math.floor(train_data.Date.dt.day/7+1)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-66-ed38dea8b142>", line 7, in <module>
+    train_data['Week'] = format(math.floor(train_data.Date.dt.day/7+1),".0f")
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-68-3c72bbac0f06>", line 7, in <module>
+    train_data['Week'] = format(math.floor(train_data.Date.dt.day/7+1),".1f")
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:cannot convert the series to <class 'float'>
+Traceback (most recent call last):
+  File "<ipython-input-70-0ad34dc1b82b>", line 7, in <module>
+    train_data['Week'] = math.floor(train_data.Date.dt.day/7+1)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/series.py", line 129, in wrapper
+    raise TypeError(f"cannot convert the series to {converter}")
+TypeError: cannot convert the series to <class 'float'>
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:'DatetimeProperties' object has no attribute 'weekofmonth'
+Traceback (most recent call last):
+  File "<ipython-input-74-8bb79331aa2b>", line 7, in <module>
+    train_data['Week'] = train_data.Date.dt.weekofmonth
+AttributeError: 'DatetimeProperties' object has no attribute 'weekofmonth'
+INFO:root:Testing Loggings
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-5-8e3e74864ecc>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
