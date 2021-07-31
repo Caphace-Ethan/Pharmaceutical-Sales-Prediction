@@ -429,3 +429,1056 @@ INFO:root:Changing non-numeric to numeric values, successfully
 INFO:root:Changing non-numeric to numeric values, successfully
 INFO:root:Changing non-numeric to numeric values, successfully
 INFO:root:Dataset Normalizing successfully
+INFO:root:Testing Loggings
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-2-8e3e74864ecc>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
+INFO:root:Adding days_to/from holiday to train dataset, successfully
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Dataset Normalizing successfully
+INFO:root:Adding days_to/from holiday to          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] dataset, successfully
+INFO:root:Adding days_to/from holiday to           Id  Store  DayOfWeek       Date  Open  Promo StateHoliday  \
+0          1      1          4 2015-09-17   1.0      1            0   
+1          2      3          4 2015-09-17   1.0      1            0   
+2          3      7          4 2015-09-17   1.0      1            0   
+3          4      8          4 2015-09-17   1.0      1            0   
+4          5      9          4 2015-09-17   1.0      1            0   
+...      ...    ...        ...        ...   ...    ...          ...   
+41083  41084   1111          6 2015-08-01   1.0      0            0   
+41084  41085   1112          6 2015-08-01   1.0      0            0   
+41085  41086   1113          6 2015-08-01   1.0      0            0   
+41086  41087   1114          6 2015-08-01   1.0      0            0   
+41087  41088   1115          6 2015-08-01   1.0      0            0   
+
+       SchoolHoliday  Year  Month  Day  WeekOfYear  Weekofmonth  \
+0                  0  2015      9   17          38            3   
+1                  0  2015      9   17          38            3   
+2                  0  2015      9   17          38            3   
+3                  0  2015      9   17          38            3   
+4                  0  2015      9   17          38            3   
+...              ...   ...    ...  ...         ...          ...   
+41083              0  2015      8    1          31            1   
+41084              0  2015      8    1          31            1   
+41085              0  2015      8    1          31            1   
+41086              0  2015      8    1          31            1   
+41087              1  2015      8    1          31            1   
+
+       days_to_from_hol  
+0                    33  
+1                    33  
+2                    33  
+3                    33  
+4                    33  
+...                 ...  
+41083                14  
+41084                14  
+41085                14  
+41086                14  
+41087                14  
+
+[41088 rows x 14 columns] dataset, successfully
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+ERROR:root:The values in the dataset are not compartible
+ERROR:root:Exception occured while merging store to train and test datasets, Exception:cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "<ipython-input-48-f8ce5fd0dafc>", line 4, in <module>
+    shape, test_store_data = data.join_dataset(test_data, store_data)
+TypeError: cannot unpack non-iterable NoneType object
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+ERROR:root:The values in the dataset are not compartible
+ERROR:root:Exception occured while merging store to train and test datasets, Exception:cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "<ipython-input-49-ebfe004139fd>", line 4, in <module>
+    shape, test_store_data = data.join_dataset(test_data, store_data)
+TypeError: cannot unpack non-iterable NoneType object
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+ERROR:root:The values in the dataset are not compartible
+ERROR:root:Exception occured while merging store to train and test datasets, Exception:cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "<ipython-input-50-5a18d0b13d15>", line 4, in <module>
+    shape, test_store_data = data.join_dataset(test_data, store_data)
+TypeError: cannot unpack non-iterable NoneType object
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+ERROR:root:The values in the dataset are not compartible
+ERROR:root:Exception occured while merging store to train and test datasets, Exception:cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "<ipython-input-53-e0f5860b7b3d>", line 4, in <module>
+    shape_test, test_store_data = data.join_dataset(test_data, store_data)
+TypeError: cannot unpack non-iterable NoneType object
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+ERROR:root:The values in the dataset are not compartible
+ERROR:root:Exception occured while merging store to train and test datasets, Exception:cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "<ipython-input-56-e0f5860b7b3d>", line 4, in <module>
+    shape_test, test_store_data = data.join_dataset(test_data, store_data)
+TypeError: cannot unpack non-iterable NoneType object
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+INFO:root:Joining store data to train and test datasets succefully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Dataset Normalizing successfully
+INFO:root:Testing Loggings
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-2-8e3e74864ecc>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
+INFO:root:Adding days_to/from holiday to          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] dataset, successfully
+INFO:root:Adding days_to/from holiday to           Id  Store  DayOfWeek       Date  Open  Promo StateHoliday  \
+0          1      1          4 2015-09-17   1.0      1            0   
+1          2      3          4 2015-09-17   1.0      1            0   
+2          3      7          4 2015-09-17   1.0      1            0   
+3          4      8          4 2015-09-17   1.0      1            0   
+4          5      9          4 2015-09-17   1.0      1            0   
+...      ...    ...        ...        ...   ...    ...          ...   
+41083  41084   1111          6 2015-08-01   1.0      0            0   
+41084  41085   1112          6 2015-08-01   1.0      0            0   
+41085  41086   1113          6 2015-08-01   1.0      0            0   
+41086  41087   1114          6 2015-08-01   1.0      0            0   
+41087  41088   1115          6 2015-08-01   1.0      0            0   
+
+       SchoolHoliday  Year  Month  Day  WeekOfYear  Weekofmonth  \
+0                  0  2015      9   17          38            3   
+1                  0  2015      9   17          38            3   
+2                  0  2015      9   17          38            3   
+3                  0  2015      9   17          38            3   
+4                  0  2015      9   17          38            3   
+...              ...   ...    ...  ...         ...          ...   
+41083              0  2015      8    1          31            1   
+41084              0  2015      8    1          31            1   
+41085              0  2015      8    1          31            1   
+41086              0  2015      8    1          31            1   
+41087              1  2015      8    1          31            1   
+
+       days_to_from_hol  
+0                    33  
+1                    33  
+2                    33  
+3                    33  
+4                    33  
+...                 ...  
+41083                14  
+41084                14  
+41085                14  
+41086                14  
+41087                14  
+
+[41088 rows x 14 columns] dataset, successfully
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+INFO:root:Joining store data to train and test datasets succefully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Dataset Normalizing successfully
+INFO:root:Testing Loggings
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-2-8e3e74864ecc>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:numexpr.utils:NumExpr defaulting to 4 threads.
+INFO:root:Adding days_to/from holiday to          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] dataset, successfully
+INFO:root:Adding days_to/from holiday to           Id  Store  DayOfWeek       Date  Open  Promo StateHoliday  \
+0          1      1          4 2015-09-17   1.0      1            0   
+1          2      3          4 2015-09-17   1.0      1            0   
+2          3      7          4 2015-09-17   1.0      1            0   
+3          4      8          4 2015-09-17   1.0      1            0   
+4          5      9          4 2015-09-17   1.0      1            0   
+...      ...    ...        ...        ...   ...    ...          ...   
+41083  41084   1111          6 2015-08-01   1.0      0            0   
+41084  41085   1112          6 2015-08-01   1.0      0            0   
+41085  41086   1113          6 2015-08-01   1.0      0            0   
+41086  41087   1114          6 2015-08-01   1.0      0            0   
+41087  41088   1115          6 2015-08-01   1.0      0            0   
+
+       SchoolHoliday  Year  Month  Day  WeekOfYear  Weekofmonth  \
+0                  0  2015      9   17          38            3   
+1                  0  2015      9   17          38            3   
+2                  0  2015      9   17          38            3   
+3                  0  2015      9   17          38            3   
+4                  0  2015      9   17          38            3   
+...              ...   ...    ...  ...         ...          ...   
+41083              0  2015      8    1          31            1   
+41084              0  2015      8    1          31            1   
+41085              0  2015      8    1          31            1   
+41086              0  2015      8    1          31            1   
+41087              1  2015      8    1          31            1   
+
+       days_to_from_hol  
+0                    33  
+1                    33  
+2                    33  
+3                    33  
+4                    33  
+...                 ...  
+41083                14  
+41084                14  
+41085                14  
+41086                14  
+41087                14  
+
+[41088 rows x 14 columns] dataset, successfully
+INFO:root: Joining          Store  DayOfWeek       Date  Sales  Customers  Open  Promo  \
+0            1          5 2015-07-31   5263        555     1      1   
+1            2          5 2015-07-31   6064        625     1      1   
+2            3          5 2015-07-31   8314        821     1      1   
+3            4          5 2015-07-31  13995       1498     1      1   
+4            5          5 2015-07-31   4822        559     1      1   
+...        ...        ...        ...    ...        ...   ...    ...   
+1017204   1111          2 2013-01-01      0          0     0      0   
+1017205   1112          2 2013-01-01      0          0     0      0   
+1017206   1113          2 2013-01-01      0          0     0      0   
+1017207   1114          2 2013-01-01      0          0     0      0   
+1017208   1115          2 2013-01-01      0          0     0      0   
+
+        StateHoliday  SchoolHoliday  Year  Month  Day  WeekOfYear  \
+0                  0              1  2015      7   31          31   
+1                  0              1  2015      7   31          31   
+2                  0              1  2015      7   31          31   
+3                  0              1  2015      7   31          31   
+4                  0              1  2015      7   31          31   
+...              ...            ...   ...    ...  ...         ...   
+1017204            a              1  2013      1    1           1   
+1017205            a              1  2013      1    1           1   
+1017206            a              1  2013      1    1           1   
+1017207            a              1  2013      1    1           1   
+1017208            a              1  2013      1    1           1   
+
+         Weekofmonth  days_to_from_hol  
+0                  5                57  
+1                  5                57  
+2                  5                57  
+3                  5                57  
+4                  5                57  
+...              ...               ...  
+1017204            1                 0  
+1017205            1                 0  
+1017206            1                 0  
+1017207            1                 0  
+1017208            1                 0  
+
+[1017209 rows x 15 columns] and       Store StoreType Assortment  CompetitionDistance  \
+0         1         c          a               1270.0   
+1         2         a          a                570.0   
+2         3         a          a              14130.0   
+3         4         c          c                620.0   
+4         5         a          a              29910.0   
+...     ...       ...        ...                  ...   
+1110   1111         a          a               1900.0   
+1111   1112         c          c               1880.0   
+1112   1113         a          c               9260.0   
+1113   1114         a          c                870.0   
+1114   1115         d          c               5350.0   
+
+      CompetitionOpenSinceMonth  CompetitionOpenSinceYear  Promo2  \
+0                           9.0                    2008.0       0   
+1                          11.0                    2007.0       1   
+2                          12.0                    2006.0       1   
+3                           9.0                    2009.0       0   
+4                           4.0                    2015.0       0   
+...                         ...                       ...     ...   
+1110                        6.0                    2014.0       1   
+1111                        4.0                    2006.0       0   
+1112                        9.0                    2013.0       0   
+1113                        9.0                    2013.0       0   
+1114                        9.0                    2013.0       1   
+
+      Promo2SinceWeek  Promo2SinceYear     PromoInterval  
+0                 0.0              0.0                 0  
+1                13.0           2010.0   Jan,Apr,Jul,Oct  
+2                14.0           2011.0   Jan,Apr,Jul,Oct  
+3                 0.0              0.0                 0  
+4                 0.0              0.0                 0  
+...               ...              ...               ...  
+1110             31.0           2013.0   Jan,Apr,Jul,Oct  
+1111              0.0              0.0                 0  
+1112              0.0              0.0                 0  
+1113              0.0              0.0                 0  
+1114             22.0           2012.0  Mar,Jun,Sept,Dec  
+
+[1115 rows x 10 columns] datasets successfully
+INFO:root:Joining store data to train and test datasets succefully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Changing non-numeric to numeric values, successfully
+INFO:root:Dataset Normalizing successfully
