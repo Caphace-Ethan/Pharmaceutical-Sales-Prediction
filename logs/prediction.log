@@ -1,0 +1,6 @@
+INFO:root:Testing Loggings
+ERROR:root:Exception in main()
+Traceback (most recent call last):
+  File "<ipython-input-2-8e3e74864ecc>", line 14, in <module>
+    exit(main())
+NameError: name 'main' is not defined
