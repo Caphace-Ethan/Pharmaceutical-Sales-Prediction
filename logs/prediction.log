@@ -13,3 +13,45 @@ INFO:root:store Dataset read successfully
 INFO:root:test Dataset read successfully
 INFO:root:sample_submission Dataset read successfully
 INFO:numexpr.utils:NumExpr defaulting to 4 threads.
+INFO:root:train Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+INFO:root:train Dataset read successfully
+INFO:root:store Dataset read successfully
+INFO:root:test Dataset read successfully
+INFO:root:sample_submission Dataset read successfully
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:'RangeIndex' object has no attribute 'year'
+Traceback (most recent call last):
+  File "<ipython-input-38-43d1453baf08>", line 2, in <module>
+    train_data['Year'] = train_data.index.year
+AttributeError: 'RangeIndex' object has no attribute 'year'
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:'Series' object has no attribute 'year'
+Traceback (most recent call last):
+  File "<ipython-input-39-ee8eab932c3d>", line 2, in <module>
+    train_data['Year'] = train_data.Date.year
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/generic.py", line 5141, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'Series' object has no attribute 'year'
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:'Series' object has no attribute 'year'
+Traceback (most recent call last):
+  File "<ipython-input-40-6a5f234ac77e>", line 2, in <module>
+    train_data['Year'] = train_data.Date.year
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/generic.py", line 5141, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'Series' object has no attribute 'year'
+ERROR:root:Exception occured in extracting Features and adding to dataset, Exception:Can only use .dt accessor with datetimelike values
+Traceback (most recent call last):
+  File "<ipython-input-41-c54920bc8bb6>", line 2, in <module>
+    train_data['Year'] = train_data.Date.dt.year
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/generic.py", line 5137, in __getattr__
+    return object.__getattribute__(self, name)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/accessor.py", line 187, in __get__
+    accessor_obj = self._accessor(obj)
+  File "/home/ethan/anaconda3/lib/python3.8/site-packages/pandas/core/indexes/accessors.py", line 480, in __new__
+    raise AttributeError("Can only use .dt accessor with datetimelike values")
+AttributeError: Can only use .dt accessor with datetimelike values
