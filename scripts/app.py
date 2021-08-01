@@ -102,10 +102,11 @@ if __name__ == "__main__":
     # Splitting the Dataset to train, test and Validation in ratio of 70%, 20%, and 10%
     y_target = train_store_data.Sales
     x_features =  train_store_data.drop(columns=['Sales'], axis=1)
-    
+    print("Separating Training Dataset", x_features)
     try: 
         x_train, x_train_test, y_train, y_train_test = train_test_split(x_features, y_target, test_size=0.20, random_state=15)
-
+        logging.info(f"separating dataset into x & y_training dataset successfully")        
+        
     except Exception as e:
         print(e)
         logging.debug(f"Exception occured in separating dataset into x & y_training dataset, {e}")
@@ -116,11 +117,12 @@ if __name__ == "__main__":
     mlflow.sklearn.log_model(model, "model")
     # Test for All datasets
     Y_pred = model.predict(x_train_test) 
+    print(Y_pred)
     plt.hist(Y_pred)
 
     error=rmspe(y_train_test,Y_pred)
     # evaluating the model
-
+    print(error)
     print('Error associated with our Model is: %.3f ' % error)
 
 
