@@ -1,0 +1,4 @@
+[core]
+    remote = remote_storage
+['remote "remote_storage"']
+    url = /home/ethan/Desktop/Machine Learning/10Academy/week3/10Academy_week03/Pharmaceutical-Sales-Prediction/data
