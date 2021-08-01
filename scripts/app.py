@@ -81,10 +81,10 @@ def fit_model(x_train, y_train):
 
     return model_test
 
-#predict
-def model_predict(model, X_test):
-    y_pred = model.predict(X_test)
-    return y_pred
+# Applying loss function to see if our model is quite correct
+def rmspe(y, y_pred):
+    rmspe = np.sqrt(np.mean( (y - y_pred)**2 ))
+    return rmspe
 
 
 if __name__ == "__main__":
@@ -113,43 +113,17 @@ if __name__ == "__main__":
     # Modelling 
     model = fit_model(x_train, y_train)
     
-    # create model
-    model = LogisticRegression()
     mlflow.sklearn.log_model(model, "model")
     # Test for All datasets
-    
+    Y_pred = model.predict(x_train_test) 
+    plt.hist(Y_pred)
 
+    error=rmspe(y_train_test,Y_pred)
     # evaluating the model
-    cv = KFold(n_splits=5, random_state=1, shuffle=True)
-    scores1 = cross_val_score(model, X1_train, y1_train, scoring='accuracy', cv=cv, n_jobs=-1)
-    scores2 = cross_val_score(model, X2_train, y2_train, scoring='accuracy', cv=cv, n_jobs=-1)
-    scores3 = cross_val_score(model, X3_train, y3_train, scoring='accuracy', cv=cv, n_jobs=-1)
-    scores4 = cross_val_score(model, X4_train, y4_train, scoring='accuracy', cv=cv, n_jobs=-1)
-    print('Accuracy for browser1 dataset (Chrome Mobile): %.3f (%.3f)' % (mean(scores1), std(scores1)))
-    print('Accuracy for browser1 dataset (Chrome Mobile WebView): %.3f (%.3f)' % (mean(scores2), std(scores2)))
-    print('Accuracy for platformOs1 dataset (6): %.3f (%.3f)' % (mean(scores3), std(scores3)))
-    print('Accuracy for platformOs2 dataset (5): %.3f (%.3f)' % (mean(scores4), std(scores4)))
+
+    print('Error associated with our Model is: %.3f ' % error)
 
 
-    mlflow.log_metric("Accuracy Dataset1", mean(scores1))
-    mlflow.log_metric("Accuracy Dataset2", mean(scores2))
-    mlflow.log_metric("Accuracy Dataset3", mean(scores3))
-    mlflow.log_metric("Accuracy Dataset4", mean(scores4))
-
-    cnf1_matrix = metrics.confusion_matrix(y1_test, target1_predictions)
-    cnf2_matrix = metrics.confusion_matrix(y2_test, target2_predictions)
-    cnf3_matrix = metrics.confusion_matrix(y3_test, target3_predictions)
-    cnf4_matrix = metrics.confusion_matrix(y4_test, target4_predictions)
-
-    cnf_matrices = [cnf1_matrix, cnf2_matrix, cnf3_matrix, cnf4_matrix]
-    i=1
-    for cnf_matrix in cnf_matrices:
-        sns.heatmap(pd.DataFrame(cnf_matrix), annot=True, cmap="YlGnBu", fmt='g')
-        plt.title(f"Figure {i}, Confusion matrix")
-        plt.ylabel('Actual')
-        plt.xlabel('Predicted')
-        plt.show()
-        i += 1
-    # mlflow.log_metric("score", score)
-    # mlflow.sklearn.log_model(lr, "model")
+    mlflow.log_metric("Error Associated with the Model is", error)
+    
     print("Model saved in run %s" % mlflow.active_run().info.run_uuid)
