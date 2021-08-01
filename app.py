@@ -12,8 +12,8 @@ st.set_page_config(page_title="Dashboard | Telecom User Data Analysis ", layout=
 st.markdown("<h1 style='color:#0b4eab;font-size:36px;border-radius:10px;'>Dashboard | Pharmaceutical Sales Prediction Model </h1>", unsafe_allow_html=True)
 
 # loading the trained model
-# pickle_in = open('models/01-08-2021-02-51-29-864.pkl', 'rb') 
-pickle_in = open('https://docs.google.com/document/d/1bYv3IYCXsCel2DG30ZTQye66FakpgAbHsIHMarjyshI/edit?usp=sharing', 'rb') 
+pickle_in = open('models/01-08-2021-02-51-29-864.pkl', 'rb') 
+# pickle_in = open('https://docs.google.com/document/d/1bYv3IYCXsCel2DG30ZTQye66FakpgAbHsIHMarjyshI/edit?usp=sharing', 'rb') 
 calculator = pickle.load(pickle_in)
  
 @st.cache()
