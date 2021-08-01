@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = ['pandas>=1.1.0', 'numpy>=1.19.0', ]
+requirements = ['pandas>=1.1.0', 'numpy>=1.19.0', 'tensorflow']
 
 test_requirements = ['pytest>=3', ]
 
@@ -24,7 +24,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Ad campaign performance Testing using A/B Hypothesis Testing",
+    description="Pharmaceutical Sales prediction across multiple stores",
     install_requires=requirements,
     long_description=readme,
     include_package_data=True,
@@ -33,7 +33,7 @@ setup(
     packages=find_packages(include=['scripts', 'scripts.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/Caphace-Ethan/Ad-campaign-performance',
+    url='https://github.com/Caphace-Ethan/Pharmaceutical-Sales-Prediction',
     version='0.1.0',
     zip_safe=False,
 )
