@@ -5,73 +5,58 @@ import scipy.stats as stats
 import matplotlib.pyplot as plt
 import seaborn as sns
 from math import ceil
-from sklearn import preprocessing
-
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 # Fitting Random Forest Regression to the dataset
 # import the regressor
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 import warnings
 
+# Import packages for logging
+import logging
+import logging.handlers
+import os
+
 import mlflow
 import mlflow.sklearn
 
 dataset_path = './data/'
-dataset_version = 'v1'
+dataset_version = 'v2'
 
 
-def loadData():
+def load_logging():
+    handler = logging.handlers.WatchedFileHandler(
+    os.environ.get("LOGFILE", "../logs/deep_learning.log"))
+    formatter = logging.Formatter(logging.BASIC_FORMAT)
+    handler.setFormatter(formatter)
+    root = logging.getLogger()
+    root.setLevel(os.environ.get("LOGLEVEL", "INFO"))
+    root.addHandler(handler)
+    logging.info("Testing Loggings") 
+    try:
+        exit(main())
+    except Exception:
+        logging.exception("Exception in main()")
+        exit(1)
+
+
+def loadData_and_scalling():
     warnings.filterwarnings('ignore')
 
-    df_browser1 = pd.read_csv(dataset_path+'browser1_dataset.csv')
-    df_browser2 = pd.read_csv(dataset_path+'browser2_dataset.csv')
-    df_platfromOs1 = pd.read_csv(dataset_path+'platform_os1_dataset.csv')
-    df_platfromOs2 = pd.read_csv(dataset_path+'platform_os2_dataset.csv')
+    train_store_data = pd.read_csv(dataset_path+'train_store_data.csv')
+    train_data = pd.read_csv(dataset_path+'train.csv')
+    test_store_data = pd.read_csv(dataset_path+'test_store_data.csv')
+    df = pd.DataFrame()
+    df['Sales'] = train_data['Sales']
+    scaler = StandardScaler()
 
-    return df_browser1, df_browser2, df_platfromOs1, df_platfromOs2
+    scale = scaler.fit(df[['Sales']]) 
+    # transform the training data column
+    df['Sales'] = scale.transform(df[['Sales']])
+    train_store_data['Sales'] = df['Sales']
 
-# Data Preparation
-def encode_labels(dataframe):
+    return train_data, train_store_data, test_store_data
 
-    experiment_encoder = preprocessing.LabelEncoder()
-    date_encoder = preprocessing.LabelEncoder()
-    hour_encoder = preprocessing.LabelEncoder()
-    device_encoder = preprocessing.LabelEncoder()
-    browser_encoder = preprocessing.LabelEncoder()
-    platform_encoder = preprocessing.LabelEncoder()
-    aware_encoder = preprocessing.LabelEncoder()
-    
-    
-    dataframe['date'] = date_encoder.fit_transform(dataframe['date'])
-    dataframe['hour'] = hour_encoder.fit_transform(dataframe['hour'])
-    dataframe['device_make'] = device_encoder.fit_transform(dataframe['device_make'])
-    dataframe['browser'] = browser_encoder.fit_transform(dataframe['browser'])
-    dataframe['experiment'] = experiment_encoder.fit_transform(dataframe['experiment'])
-    dataframe['platform_os'] = platform_encoder.fit_transform(dataframe['platform_os'])
-    dataframe['aware'] = aware_encoder.fit_transform(dataframe['aware'])
-    
-    return dataframe 
-
-#create feature and target column
-def dataset_features(df):
-    df1 = encode_labels(df)
-    feature_col =["experiment", "hour", "date", "device_make","browser","platform_os"]
-    features_X = df1[feature_col]
-    target_y = df1["aware"]
-
-    return features_X, target_y
-
-# browser1_df_features, browser1_df_target = dataset_features(browser1_dataset)
-# browser1_df_features
-
-def train_test_val_split(X, Y, split=(0.2, 0.1), shuffle=True):
-    
-
-    assert len(X) == len(Y), 'The length of X and Y must be consistent.'
-    X_train, X_test_val, y_train, Y_test_val = train_test_split(X, Y, test_size=(split[0]+split[1]), shuffle=shuffle)
-    X_test, X_val, y_test, y_val = train_test_split(X_test_val, Y_test_val, 
-        test_size=split[1], shuffle=False)
-    return (X_train, y_train), (X_test, y_test), (X_val, y_val)
 
 #fit model
 def fit_model(model, x_train, y_train):
@@ -86,21 +71,19 @@ def model_predict(model, X_test):
 
 if __name__ == "__main__":
     mlflow.set_experiment(experiment_name='Exp01-Logistic Regression')
-    print("Loading Dataset")
-    # mlflow.sklearn.log_version("v1")
-    df_browser1, df_browser2, df_platfromOs1, df_platfromOs2 = loadData()
+    print("Loading logging, and Dataset")
+    load_logging()
+    try:
+
+        train_data, train_store_data, test_store_data = loadData_and_scalling()
+        logging.info(f"Dataset loaded and scalled successfully")
+    except Exception as e:
+        print(e)
+        logging.exception(f" Exception occured in reading, and Scalling dataset, {e}")
 
     # Splitting the Dataset to train, test and Validation in ratio of 70%, 20%, and 10%
-
-    browser1_X, browser1_Y = dataset_features(df_browser1)
-    browser2_X, browser2_Y = dataset_features(df_browser2)
-    platform1_X, platform1_Y = dataset_features(df_platfromOs1)
-    platform2_X, platform2_Y = dataset_features(df_platfromOs2)
-
-    (X1_train, y1_train), (X1_test, y1_test), (X1_val, y1_val)=train_test_val_split(browser1_X, browser1_Y)
-    (X2_train, y2_train), (X2_test, y2_test), (X2_val, y2_val)=train_test_val_split(browser2_X, browser2_Y)
-    (X3_train, y3_train), (X3_test, y3_test), (X3_val, y3_val)=train_test_val_split(platform1_X, platform1_Y)
-    (X4_train, y4_train), (X4_test, y4_test), (X4_val, y4_val)=train_test_val_split(platform2_X, platform2_Y)
+    y_target = train_store_data.Sales
+    x_features =  train_store_data.drop(columns=['Sales'], axis=1)
     
     # Modelling 
 
