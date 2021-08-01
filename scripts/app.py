@@ -59,9 +59,27 @@ def loadData_and_scalling():
 
 
 #fit model
-def fit_model(model, x_train, y_train):
-    model.fit(x_train, y_train)
-    return model
+def fit_model(x_train, y_train):
+    #training using cross validation set
+    regressor_validation=RandomForestRegressor(n_estimators=128, 
+                                criterion='mse', 
+                                max_depth=20, 
+                                min_samples_split=10, 
+                                min_samples_leaf=1, 
+                                min_weight_fraction_leaf=0.0, 
+                                max_features='auto', 
+                                max_leaf_nodes=None, 
+                                min_impurity_decrease=0.0, 
+                                min_impurity_split=None, 
+                                bootstrap=True, 
+                                oob_score=False,
+                                n_jobs=4, #setting n_jobs to 4 makes sure you're using the full potential of the machine you're running the training on
+                                random_state=35, 
+                                verbose=0, 
+                                warm_start=False)
+    model_test=regressor_validation.fit(x_train,y_train)
+
+    return model_test
 
 #predict
 def model_predict(model, X_test):
@@ -85,16 +103,21 @@ if __name__ == "__main__":
     y_target = train_store_data.Sales
     x_features =  train_store_data.drop(columns=['Sales'], axis=1)
     
-    # Modelling 
+    try: 
+        x_train, x_train_test, y_train, y_train_test = train_test_split(x_features, y_target, test_size=0.20, random_state=15)
 
+    except Exception as e:
+        print(e)
+        logging.debug(f"Exception occured in separating dataset into x & y_training dataset, {e}")
+
+    # Modelling 
+    model = fit_model(x_train, y_train)
+    
     # create model
     model = LogisticRegression()
     mlflow.sklearn.log_model(model, "model")
     # Test for All datasets
-    target1_predictions = model_predict(fit_model(model,X1_train, y1_train), X1_test)
-    target2_predictions = model_predict(fit_model(model,X2_train, y2_train), X2_test)
-    target3_predictions = model_predict(fit_model(model,X3_train, y3_train), X3_test)
-    target4_predictions = model_predict(fit_model(model,X4_train, y4_train), X4_test)
+    
 
     # evaluating the model
     cv = KFold(n_splits=5, random_state=1, shuffle=True)
