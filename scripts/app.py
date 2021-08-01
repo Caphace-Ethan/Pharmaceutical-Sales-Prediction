@@ -26,7 +26,7 @@ dataset_version = 'v2'
 
 def load_logging():
     handler = logging.handlers.WatchedFileHandler(
-    os.environ.get("LOGFILE", "../logs/deep_learning.log"))
+    os.environ.get("LOGFILE", "./logs/mlflow.log"))
     formatter = logging.Formatter(logging.BASIC_FORMAT)
     handler.setFormatter(formatter)
     root = logging.getLogger()
@@ -88,7 +88,7 @@ def rmspe(y, y_pred):
 
 
 if __name__ == "__main__":
-    mlflow.set_experiment(experiment_name='Exp01-Logistic Regression')
+    mlflow.set_experiment(experiment_name='Exp01-Random Forest')
     print("Loading logging, and Dataset")
     load_logging()
     try:
