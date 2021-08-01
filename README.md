@@ -14,3 +14,9 @@
 - Serialize models,
 - Building model with deep learning, and 
 - Using MLFlow to serve the prediction
+
+### This part is done in 'Exploration_of_customer_purchasing_behavior.ipynb' in notebook folder
+
+## Part 03. Building model with Deep Learning Using Tensorflow 
+
+### This part is done in 'Deep_Learning.ipynb' in notebook folder
