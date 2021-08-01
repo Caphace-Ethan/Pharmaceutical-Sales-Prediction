@@ -6,6 +6,7 @@ import streamlit as st
 import altair as alt
 import plotly.express as px
 import pickle
+import math
 
 st.set_page_config(page_title="Dashboard | Telecom User Data Analysis ", layout="wide")
 st.markdown("<h1 style='color:#0b4eab;font-size:36px;border-radius:10px;'>Dashboard | Pharmaceutical Sales Prediction Model </h1>", unsafe_allow_html=True)
@@ -75,7 +76,7 @@ def prediction(Store, StoreType, DayOfWeek, Promo, StateHoliday, Year, Month, Da
                 WeekOfYear, days_to_from_hol, Assortment, CompetitionDistance, CompetitionOpenSinceMonth,
                 CompetitionOpenSinceYear, Promo2, Promo2SinceWeek, Promo2SinceYear, PromoInterval]])
      
-    return prediction
+    return prediction*5773.8
 
     # this is the main function in which we define our webpage  
 def main():       
