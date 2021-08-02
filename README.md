@@ -19,8 +19,10 @@
 
 ## Part 03. Building model with Deep Learning Using Tensorflow 
 
-### This part is done in 'Deep_Learning.ipynb' in notebook folder
+- This part is done in 'Deep_Learning.ipynb' in notebook folder
 
-## Part 04. The Dashboard for ML Prediction is done in 'app.py' file in main directory
+## Part 04. The Dashboard for ML Prediction 
+- This part is done in 'app.py' file in main directory
 
-## Part 05. The MLflow is done in 'scripts/app.py' file
+## Part 05. The MLflow 
+- This part is done in 'scripts/app.py' file
