@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ethan/Desktop/Machine%20Learning/10Academy/week3/10Academy_week03/Pharmaceutical-Sales-Prediction/scripts/mlruns/1/ed375f4c80524b74ac25fffe8388cb85/artifacts
+end_time: 1627833330021
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: ed375f4c80524b74ac25fffe8388cb85
+run_uuid: ed375f4c80524b74ac25fffe8388cb85
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1627833277199
+status: 3
+tags: []
+user_id: ethan

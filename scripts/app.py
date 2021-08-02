@@ -19,26 +19,21 @@ import os
 
 import mlflow
 import mlflow.sklearn
+from mlflow import log_metric, log_param, log_artifacts
 
-dataset_path = './data/'
+dataset_path = '../data/'
 dataset_version = 'v2'
 
 
 def load_logging():
     handler = logging.handlers.WatchedFileHandler(
-    os.environ.get("LOGFILE", "./logs/mlflow.log"))
+    os.environ.get("LOGFILE", "../logs/mlflow.log"))
     formatter = logging.Formatter(logging.BASIC_FORMAT)
     handler.setFormatter(formatter)
     root = logging.getLogger()
     root.setLevel(os.environ.get("LOGLEVEL", "INFO"))
     root.addHandler(handler)
     logging.info("Testing Loggings") 
-    try:
-        exit(main())
-    except Exception:
-        logging.exception("Exception in main()")
-        exit(1)
-
 
 def loadData_and_scalling():
     warnings.filterwarnings('ignore')
@@ -98,6 +93,8 @@ if __name__ == "__main__":
     except Exception as e:
         print(e)
         logging.exception(f" Exception occured in reading, and Scalling dataset, {e}")
+    log_param("Size of train set", train_store_data.shape)
+    log_param("Size of test set", test_store_data.shape )
 
     # Splitting the Dataset to train, test and Validation in ratio of 70%, 20%, and 10%
     y_target = train_store_data.Sales
@@ -110,6 +107,11 @@ if __name__ == "__main__":
     except Exception as e:
         print(e)
         logging.debug(f"Exception occured in separating dataset into x & y_training dataset, {e}")
+    log_metric("x_train size", 3)
+    log_metric("y_train size", 9)
+    log_metric("x_train_test size", 5)
+    log_metric("y_train_test size", 7)
+
 
     # Modelling 
     model = fit_model(x_train, y_train)
@@ -125,7 +127,7 @@ if __name__ == "__main__":
     print(error)
     print('Error associated with our Model is: %.3f ' % error)
 
-
-    mlflow.log_metric("Error Associated with the Model is", error)
+    log_metric("Error Associated with the Model is", error)
     
     print("Model saved in run %s" % mlflow.active_run().info.run_uuid)
+    log_artifacts("outputs")

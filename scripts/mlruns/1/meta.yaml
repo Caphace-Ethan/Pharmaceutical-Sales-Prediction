@@ -1,0 +1,4 @@
+artifact_location: file:///home/ethan/Desktop/Machine%20Learning/10Academy/week3/10Academy_week03/Pharmaceutical-Sales-Prediction/scripts/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: Exp01-Random Forest
